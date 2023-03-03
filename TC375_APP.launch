@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.infineon.aurix.buildsystem.winidea.launchConfigurationType">
+    <booleanAttribute key="com.infineon.aurix.buildsystem.winidea.launchConfigurationType.DOWNLOAD_PROGRAM_ATTR" value="true"/>
+    <booleanAttribute key="com.infineon.aurix.buildsystem.winidea.launchConfigurationType.RUN_TO_SYMBOL_ATTR" value="true"/>
+    <stringAttribute key="com.infineon.aurix.buildsystem.winidea.launchConfigurationType.RUN_TO_SYMBOL_VALUE_ATTR" value="core0_main"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Product\Exe\TC375_APP.elf"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="TC375_Project"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.infineon.aurix.buildsystem.managed.configuration.binary.1864048771"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/TC375_Project"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+</launchConfiguration>
