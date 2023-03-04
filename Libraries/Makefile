@@ -5,13 +5,15 @@
 # iLLD Object File Path
 #*******************************************************************************
 ILLD_OBJS_DIR			= ./Obj
-
+ILLD_LIB_DIR			= ./Lib
+TARGET_LIB_FILE         = ./Lib/TC375_ILLD.a
 #*******************************************************************************
 # Define Compiler, Assembler, Linker Command
 #*******************************************************************************
 CC 						= cctc
 AS						= cctc
 LD 						= cctc
+Lib						= artc
 
 #*******************************************************************************
 # Directorys of iLLD Source to build
@@ -488,14 +490,21 @@ $(ILLD_OBJS_DIR)/%.o: %.c
 #*******************************************************************************
 # Build targets
 #*******************************************************************************
-.PHONY: all dir clean
+.PHONY: all dir build clean
 
-all: dir $(ILLD_OBJECTS)
+all: dir Lib
+
+Lib: $(ILLD_OBJECTS)
+	@echo =============================================================
+	@echo '                    Make ILLD Library                  '
+	@echo =============================================================
+	$(Lib) -r $(TARGET_LIB_FILE) $(ILLD_OBJECTS) 
 
 dir:
 	@echo make dir...
 	@if test ! -d $(ILLD_OBJS_DIR); then mkdir -p $(ILLD_OBJS_DIR); fi
-
+	@if test ! -d $(ILLD_LIB_DIR); then mkdir -p $(ILLD_LIB_DIR); fi
+	
 clean:
 	@echo clean...
 	@if test -d $(ILLD_OBJS_DIR) ; then rm -r $(ILLD_OBJS_DIR); fi

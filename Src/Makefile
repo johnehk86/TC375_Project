@@ -167,7 +167,7 @@ build: $(OBJECTS)
 	@echo =============================================================
 	@echo '                    App Sw Linking Start!                  '
 	@echo =============================================================
-	@$(LD) -o $(TARGET_ELF_FILE) $^ $(ILLD_OBJECTS) $(LDFLAGS)
+	$(LD) -o $(TARGET_ELF_FILE) $^ $(ILLD_LIB_DIR)/TC375_ILLD.a $(LDFLAGS)
 	@echo App SW Build Finish!
 	
 clean:

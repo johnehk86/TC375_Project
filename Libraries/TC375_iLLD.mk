@@ -5,6 +5,7 @@
 # iLLD Object File Path
 #*******************************************************************************
 ILLD_OBJS_DIR			= ../Libraries/Obj
+ILLD_LIB_DIR			= ../Libraries/Lib
 
 #*******************************************************************************
 # Directorys of iLLD Source to build
